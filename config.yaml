@@ -1,0 +1,75 @@
+baseURL: 'https://blog.data-niklas.de/'
+languageCode: en-us
+title: data-niklas blog
+theme: hugo-PaperMod
+paginate: 6
+disqusShortname: https-hugo-tania-netlify-app
+enableEmoji: false
+params:
+  env: production
+  titleLogo: favicon.ico
+  enableFootnotes: true
+  siteName: data-niklas blog
+  siteDesc: data-niklas blog
+  author: Niklas Loeser
+  maxCategoryToShow: 10
+  assets:
+    disableHLJS: true
+  colorScheme:
+    toggle: true
+    default: auto
+  comments:
+    enabled: false
+  homeInfoParams:
+    Title: Hi 👋
+    Content: Random notes 🖊️ 🦄
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  disableAnchoredHeadings: true
+
+
+  socialIcons: # optional
+    - name: "Github"
+      url: "https://github.com/data-niklas"
+menu:
+  main:
+    - identifier: rss
+      name: RSS
+      url: /index.xml
+      weight: 5
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 15
+    - identifier: search
+      name: search
+      url: /search/
+      weight: 20
+# menu:
+#   header:
+#     - name: Posts
+#       url: /posts/
+#   footer:
+#     - name: RSS
+#       url: /index.xml
+markup:
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: false
+    lineNos: true
+    style: monokai
+  goldmark:
+    renderer:
+      unsafe: true
+
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
